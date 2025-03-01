@@ -14,7 +14,7 @@ app.use(express.json());
 let history = [];
 
 const client = new OpenAI({
-  apiKey: '', // This is the default and can be omitted
+  apiKey: process.env['OPENAI_API_KEY'], // This is the default and can be omitted
 });
 
 // Function to pause execution for a given number of milliseconds
